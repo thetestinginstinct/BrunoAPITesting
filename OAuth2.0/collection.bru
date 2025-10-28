@@ -1,0 +1,18 @@
+auth {
+  mode: oauth2
+}
+
+auth:oauth2 {
+  grant_type: client_credentials
+  access_token_url: {{baseUrl}}/api/auth/oauth2/client-credentials/token
+  refresh_token_url: 
+  client_id: demo-client-id
+  client_secret: demo-client-secret
+  scope: user:read
+  credentials_placement: body
+  credentials_id: credentials
+  token_placement: url
+  token_query_key: access_token
+  auto_fetch_token: true
+  auto_refresh_token: false
+}
