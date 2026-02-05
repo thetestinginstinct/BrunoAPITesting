@@ -1,10 +1,10 @@
 meta {
-  name: Partial Update User
+  name: Delete User
   type: http
-  seq: 4
+  seq: 2
 }
 
-patch {
+delete {
   url: https://reqres.in/api/users/2
   body: json
   auth: none
@@ -19,13 +19,6 @@ auth:bearer {
   token: 
 }
 
-body:json {
-  {
-      "name": "morpheus",
-      "job": "zion resident"
-  }
-}
-
 assert {
-  res.status: eq 200
+  res.status: eq 204
 }

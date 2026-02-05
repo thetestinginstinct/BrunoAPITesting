@@ -1,10 +1,10 @@
 meta {
-  name: Delete User
+  name: Update User
   type: http
-  seq: 5
+  seq: 2
 }
 
-delete {
+put {
   url: https://reqres.in/api/users/2
   body: json
   auth: none
@@ -19,6 +19,13 @@ auth:bearer {
   token: 
 }
 
+body:json {
+  {
+      "name": "morpheus",
+      "job": "zion resident"
+  }
+}
+
 assert {
-  res.status: eq 204
+  res.status: eq 200
 }
