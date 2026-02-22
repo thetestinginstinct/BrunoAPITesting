@@ -24,6 +24,8 @@ assert {
 }
 
 script:pre-request {
+  req.setHeader("content-type", "application/json");
+  
   const { faker } = require('@faker-js/faker');
   const randomName = faker.person.firstName();
   const randomJob = faker.person.jobTitle();
