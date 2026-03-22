@@ -16,3 +16,11 @@ body:json {
       "job": "leader"
   }
 }
+
+tests {
+  const { assertCodes } = require("../shared-scripts/utils");
+  
+  test("Status code should match expected value", () => {
+    expect(res.status).to.equal(assertCodes[1]);
+  });
+}

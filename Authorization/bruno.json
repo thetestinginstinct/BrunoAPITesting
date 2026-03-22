@@ -1,5 +1,10 @@
 {
   "version": "1",
   "name": "Authorization",
-  "type": "collection"
+  "type": "collection",
+  "scripts": {
+    "additionalContextRoots": [
+      "C:/Youtube/Bruno/BrunoAPITesting/shared-scripts"
+    ]
+  }
 }

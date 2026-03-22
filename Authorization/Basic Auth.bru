@@ -14,3 +14,12 @@ auth:basic {
   username: postman
   password: password
 }
+
+tests {
+  const { assertCodes } = require("../shared-scripts/utils");
+  
+  
+  test("Status code should match expected value", () => {
+    expect(res.status).to.equal(assertCodes[0]);
+  });
+}

@@ -1,7 +1,7 @@
 meta {
   name: Create User
   type: http
-  seq: 2
+  seq: 1
 }
 
 post {
@@ -47,6 +47,14 @@ script:post-response {
 }
 
 tests {
+  // const { assertCodes } = require("./Folder1/utility");
+  const { assertCodes } = require("../shared-scripts/utils");
+  
+  
+  test("Status code should match expected value", () => {
+    expect(res.status).to.equal(assertCodes[1]);
+  });
+  
   test("status code test", function() {
     expect(res.getStatus()).to.equal(201);
   });
